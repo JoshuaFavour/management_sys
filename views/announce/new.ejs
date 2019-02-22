@@ -1,0 +1,37 @@
+<%include ../partials/header%>
+<section style="background:white; height:100%;">
+  <div class="ui main container segment" >
+    <div class="ui huge header">Create Announcement
+    </div>
+    <form class="ui form" action="/announcements" method="post" style="margin-top:50px;">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="field">
+            <label for="name">From </label>
+            <input type="text" name="ann[from]" value="" placeholder="from" id="name">
+          </div>
+          <div class="field">
+            <label for="url">To </label>
+            <input type="text" name="ann[to]" value="" placeholder="to" id="url">
+          </div>
+          <div class="field">
+            <label for="url">Subject </label>
+            <input type="text" name="ann[head]" value="" placeholder="Subject" id="url">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="field">
+            <label for="body">Compose </label>
+            <textarea name="ann[cont]" rows="8" cols="80" id="body" required></textarea>
+          </div>
+          <input class="ui purple basic button" type="submit" value="Create">
+        </div>
+
+
+
+      </div>
+
+    </form>
+  </div>
+
+</section>

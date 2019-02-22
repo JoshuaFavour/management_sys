@@ -1,0 +1,32 @@
+<%include ../partials/header%>
+<section style="background: white; height:340px;" >
+  <h1><i class="big green bullhorn icon"></i></h1>
+  <h5 style="font-family:Raleway;">ANNOUNCEMENTS</h5>
+  <p style="font-family:Raleway; font-size:40px;"><strong>Welcome to the announcements page</strong></p>
+  <hr style="color:gray; width:25%;">
+  <a href="/announcements/new" class="ui large green button">
+    New Announcement
+  </a>
+  <br>
+</section>
+<%ann.forEach(function(data){%>
+    <div  style="margin:20px; ">
+      <div class="row"style="text-align:left;">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8 announcebord shad" style="background:#ffffff;">
+          <h4><%=data.head%></h4>
+          <p><%=data.from%></p>
+          <p><%=data.to%></p>
+          <p><%=data.cont.substring(0,250)%>...<a href="/announcements/<%=data._id%>">Read more</a></p>
+          <p class="date"><%=data.time.toDateString()%></p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+
+    </div>
+<%})%>
+
+<%include ../partials/footer%>

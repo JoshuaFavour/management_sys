@@ -1,0 +1,30 @@
+<% include ../partials/header%>
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+        <div class="container">
+          <h2>Staff members</h2>
+          <a href="/staff/new" class="btn btn-lg btn-success text-center">register staff</a>
+        </div>
+      </div>
+    </div>
+    <div class="row" >
+      <%found.forEach(function(staff){%>
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <a href="/staff/<%=staff._id%>"><img src="<%=staff.image%>" alt="" style="height:300px; width:300px;"></a>
+          <div class="caption">
+            <p style="color:purple;"><%=staff.department%></p>
+            <p><strong><%=staff.sname%> <%=staff.oname%></strong></p>
+            <p><%=staff.position%></p>
+            <a href="/staff/<%=staff._id%>">view more</a>
+          </div>
+        </div>
+      </div>
+      <%})%>
+    </div>
+  </div>
+
+
+
+<% include ../partials/footer%>

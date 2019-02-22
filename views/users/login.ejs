@@ -1,0 +1,37 @@
+<%include ../partials/headerlogin%>
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=2294160290850689&autoLogAppEvents=1"></script>
+<section style="padding-top:8%;">
+  <div class="row">
+    <div class="col-md-7">
+    </div>
+
+    <div class="col-md-4 animated fadeInRightBig brd" style="  background-color: #fff; margin-left:auto; margin-right:auto; padding:60px; border-radius:18px; opacity:.5;">
+
+      <h3 style="margin-top: 30px; margin-bottom: 30px; font-family:Montserrat; font-weight:900; font-size:40px; text-align:center;">Account Login <br>  Page</h3>
+        <div class="">
+
+      <form class="" action="/login" method="post" style="font-family:Raleway;">
+          <div class="form-group">
+<label for="exampleInputEmail1">Username</label>
+<input type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true"></div>
+
+        </div>
+
+    </div>
+  </div>
+  <div class="col-md-1">
+
+  </div>
+    </section>
+</div>

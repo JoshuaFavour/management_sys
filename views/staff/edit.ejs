@@ -1,0 +1,54 @@
+<%include ../partials/header%>
+<div class="ui main text container segment">
+<h2>New member of staff? Add them here!</h2>
+<form class="ui form" action="/staff/<%=data._id%>?_method=put" method="post">
+  <div class="field">
+    <label for="name">Sir Name </label>
+    <input type="text" name="staff[sname]" value="<%=data.sname%>"  id="name" required>
+  </div>
+  <div class="field">
+    <label for="url">Other Names</label>
+    <input type="text" name="staff[oname]" value="<%=data.oname%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">Nationality </label>
+    <input type="text" name="staff[nationality]" value="<%=data.nationality%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">DOB</label>
+    <input type="text" name="staff[dob]" value="<%=data.dob%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">department</label>
+    <input type="text" name="staff[department]" value="<%=data.department%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">position </label>
+    <input type="text" name="staff[position]" value="<%=data.position%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">id Number </label>
+    <input type="text" name="staff[idNum]" value="<%=data.idNum%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">Image url </label>
+    <input type="text" name="staff[image]" value="<%=data.image%>" id="url" required>
+  </div>
+  <div class="field">
+    <label for="body">phone numer </label>
+    <input type="text" name="staff[phone]" value="<%=data.phone%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">email </label>
+    <input type="text" name="staff[email]" value="<%=data.email%>"  id="url" required>
+  </div>
+  <div class="field">
+    <label for="url">address </label>
+    <input type="text" name="staff[address]" value="<%=data.address%>"  id="url" required>
+  </div>
+
+  <input class="btn btn-md btn-success" type="submit">
+
+</form>
+</div>
+<%include ../partials/footer%>
