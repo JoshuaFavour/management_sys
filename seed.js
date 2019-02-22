@@ -86,11 +86,7 @@ var data2=[{from: "Youth Ministry",
               })
             })
           })
-          users.deleteMany({}, function(err){
-            if(err){
-              console.log(err);
-            }
-          })
+        
         }
 
   module.exports= seedDB;
