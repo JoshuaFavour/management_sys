@@ -40,13 +40,18 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="top-navbar-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/staff">Staff</a></li>
           <li><a href="/announcements">Announcements</a></li>
           <li><a href="/events">Events</a></li>
           <li><a href="/facilities">Facilities</a></li>
           <li><a href="/programs">Programs</a></li>
-          <li><a class="btn btn-link-3" href="#">Add new</a></li>
+          <%if(!currentUser){%>
+          <li><a class="btn btn-link-3" href="/login">Login</a></li>
+          <li><a class="btn btn-link-3" href="/login">Register</a></li>
+        <%}else{%>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/staff">Staff</a></li>
+          <li><a class="btn btn-link-3" href="/logout">Log out</a></li>
+        <%}%>
         </ul>
       </div>
     </div>

@@ -4,10 +4,13 @@
   <h5 style="font-family:Raleway;">ANNOUNCEMENTS</h5>
   <p style="font-family:Raleway; font-size:40px;"><strong>Welcome to the announcements page</strong></p>
   <hr style="color:gray; width:25%;">
+  <%if(currentUser){%>
   <a href="/announcements/new" class="ui large green button">
     New Announcement
   </a>
   <br>
+<%}%>
+
 </section>
 <%ann.forEach(function(data){%>
     <div  style="margin:20px; ">
